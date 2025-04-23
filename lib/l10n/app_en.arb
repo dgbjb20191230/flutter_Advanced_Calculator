@@ -1,0 +1,16 @@
+{
+  "appTitle": "Advanced Calculator",
+  "radianMode": "Radian",
+  "degreeMode": "Degree",
+  "history": "History",
+  "clearHistory": "Clear History",
+  "noHistory": "No history yet",
+  "settings": "Settings",
+  "soundFeedback": "Sound Feedback",
+  "vibrationFeedback": "Vibration Feedback",
+  "historyLimit": "History Limit",
+  "lightTheme": "Light Theme",
+  "darkTheme": "Dark Theme",
+  "followSystem": "Follow System",
+  "copyright": "© 2025 Advanced Calculator App"
+}
