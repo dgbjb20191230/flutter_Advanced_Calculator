@@ -3,8 +3,18 @@
 - [开发详细指南（中文）](./FLUTTER_CALCULATOR_DEV_GUIDE.md)
 - [Development Guide (English)](./FLUTTER_CALCULATOR_DEV_GUIDE_EN.md)
 
+<div align="center">
+
+**应用主界面展示**  
+<img src="/assets/Screenshot_20250423_124747.jpg" alt="主界面截图" width="350" />
+
+**科学计算功能界面**  
+<img src="/assets/Screenshot_20250423_124754.jpg" alt="科学计算截图" width="350" />
+
+</div>
 
 ## 1. 项目构建流程
+
 ### 1.1 环境准备
 - 安装 Flutter SDK
 - 配置 Android Studio/Xcode/VSCode
