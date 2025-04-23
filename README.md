@@ -5,11 +5,18 @@
 
 <div align="center">
 
-**应用主界面展示**  
-<img src="/assets/Screenshot_20250423_124747.jpg" alt="主界面截图" width="350" />
-
-**科学计算功能界面**  
-<img src="/assets/Screenshot_20250423_124754.jpg" alt="科学计算截图" width="350" />
+<table>
+  <tr>
+    <td align="center">
+      <img src="/assets/Screenshot_20250423_124747.jpg" alt="主界面截图" width="320" /><br />
+      <sub>应用主界面展示</sub>
+    </td>
+    <td align="center">
+      <img src="/assets/Screenshot_20250423_124754.jpg" alt="科学计算截图" width="320" /><br />
+      <sub>科学计算功能界面</sub>
+    </td>
+  </tr>
+</table>
 
 </div>
 
