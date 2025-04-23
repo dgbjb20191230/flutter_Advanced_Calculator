@@ -1,28 +1,30 @@
-# Flutter Advanced Scientific Calculator Project Development Guide
+# 🧮 Flutter Advanced Scientific Calculator Project Development Guide
 
-## Table of Contents
-- [Project Overview](#project-overview)
-- [Development Environment Setup](#development-environment-setup)
-- [Project Structure](#project-structure)
-- [Tech Stack](#tech-stack)
-- [UI Design & Features](#ui-design--features)
-- [Core Components & Naming](#core-components--naming)
-- [State Management (Provider/Riverpod Example)](#state-management-providerriverpod-example)
-- [Internationalization & Language Switch](#internationalization--language-switch)
-- [Testing & QA](#testing--qa)
-- [Packaging & Release](#packaging--release)
-- [Auto Upload Release](#auto-upload-release)
-- [FAQ & Suggestions](#faq--suggestions)
-- [Appendix: Code Snippets & Advanced Usage](#appendix-code-snippets--advanced-usage)
+[⬇️ **Android Latest Download**](https://github.com/HuQingyepersonalprojectsummary/flutterjisuanqqi20250421/releases/latest)
+
+## 📚 Table of Contents
+- [📖 Project Overview](#project-overview)
+- [🛠️ Development Environment Setup](#development-environment-setup)
+- [🗂️ Project Structure](#project-structure)
+- [🧰 Tech Stack](#tech-stack)
+- [🎨 UI Design & Features](#ui-design--features)
+- [🧩 Core Components & Naming](#core-components--naming)
+- [🔄 State Management (Provider/Riverpod Example)](#state-management-providerriverpod-example)
+- [🌏 Internationalization & Language Switch](#internationalization--language-switch)
+- [🧪 Testing & QA](#testing--qa)
+- [📦 Packaging & Release](#packaging--release)
+- [☁️ Auto Upload Release](#auto-upload-release)
+- [❓ FAQ & Suggestions](#faq--suggestions)
+- [📎 Appendix: Code Snippets & Advanced Usage](#appendix-code-snippets--advanced-usage)
 
 ---
 
-## Project Overview
+## 📖 Project Overview
 This project is a Flutter-based advanced scientific calculator app supporting basic and scientific calculations, memory operations, history, theme switching, and more. It features a modern, responsive UI and supports Windows, macOS, Linux, Android, and iOS platforms.
 
 ---
 
-## Development Environment Setup
+## 🛠️ Development Environment Setup
 1. Install Flutter SDK
    - Official: https://flutter.dev
    - Recommended version: 3.x+
@@ -36,7 +38,7 @@ This project is a Flutter-based advanced scientific calculator app supporting ba
 
 ---
 
-## Project Structure
+## 🗂️ Project Structure
 ```
 ├── lib/
 │   ├── main.dart           # Entry point
@@ -54,7 +56,7 @@ This project is a Flutter-based advanced scientific calculator app supporting ba
 
 ---
 
-## Tech Stack
+## 🧰 Tech Stack
 - **Framework**: Flutter 3.x
 - **Language**: Dart
 - **State Management**: Provider / Riverpod / Bloc (Provider recommended)
@@ -64,7 +66,7 @@ This project is a Flutter-based advanced scientific calculator app supporting ba
 
 ---
 
-## UI Design & Features
+## 🎨 UI Design & Features
 ### 1. Main Layout
 #### 1.1 Display Area
 - Large font for current input/result, auto-shrinks if overflow
@@ -133,7 +135,7 @@ This project is a Flutter-based advanced scientific calculator app supporting ba
 
 ---
 
-## Core Components & Naming
+## 🧩 Core Components & Naming
 - `CalculatorScreen`: main container
   - `DisplayPanel`: expression/result/status
   - `ScientificPad`: scientific buttons
@@ -155,7 +157,7 @@ This project is a Flutter-based advanced scientific calculator app supporting ba
 
 ---
 
-## State Management (Provider/Riverpod Example)
+## 🔄 State Management (Provider/Riverpod Example)
 - Use Provider or Riverpod for global state:
   - Expression, result, history, memory, theme, mode, errors
 - Separate business logic (e.g. `services/calculator_service.dart`)
@@ -169,7 +171,7 @@ final calculatorProvider = StateNotifierProvider<CalculatorNotifier, CalculatorS
 
 ---
 
-## Testing & QA
+## 🧪 Testing & QA
 - Unit tests for calculation logic (test/services/calculator_service_test.dart)
 - Widget tests for UI (test/widgets/)
 - Integration tests on all platforms
@@ -193,7 +195,29 @@ final calculatorProvider = StateNotifierProvider<CalculatorNotifier, CalculatorS
 
 ---
 
-## Packaging & Release
+## 📦 Packaging & Release
+
+### ☁️ Upload to GitHub Release and Distribute Installer
+
+1. Make sure your local repo is pushed to GitHub:
+   ```bash
+   git add .
+   git commit -m "release: add app-release"
+   git push
+   ```
+2. Use GitHub CLI to create a Release and upload the installer (requires gh):
+   ```bash
+   gh release create v1.0.0 releases/app-release.apk --title "Calculator v1.0.0" --notes "Flutter Android APK"
+   ```
+   - `v1.0.0` is the release version, change as needed.
+   - `releases/app-release.apk` is the installer path, ensure it's correct.
+   - This will generate a Release page.
+3. Visit your Release page or download the latest:
+   - [Release page (v1.0.0 example)](https://github.com/HuQingyepersonalprojectsummary/flutterjisuanqqi20250421/releases/tag/v1.0.0)
+   - [⬇️ Android Latest Download](https://github.com/HuQingyepersonalprojectsummary/flutterjisuanqqi20250421/releases/latest)
+
+> For new versions, just update the version and file, and repeat the above commands.
+
 - Set version in `pubspec.yaml`
 - Desktop: `flutter build windows/macos/linux --release`
 - Android: `flutter build apk/appbundle`
@@ -202,13 +226,13 @@ final calculatorProvider = StateNotifierProvider<CalculatorNotifier, CalculatorS
 
 ---
 
-## Auto Upload Release
+## ☁️ Auto Upload Release
 - Install GitHub CLI, login
 - Use `gh release create` and `gh release upload`
 
 ---
 
-## FAQ & Suggestions
+## ❓ FAQ & Suggestions
 - Setup dependencies for each platform
 - Android/iOS: signing required
 - Use English filenames

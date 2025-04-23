@@ -1,5 +1,7 @@
 # 🧮 高级计算器 Flutter 项目开发文档
 
+[⬇️ **安卓最新版下载**](https://github.com/HuQingyepersonalprojectsummary/flutterjisuanqqi20250421/releases/latest)
+
 - 📚 [开发详细指南（中文）](./FLUTTER_CALCULATOR_DEV_GUIDE.md)
 - 📘 [Development Guide (English)](./FLUTTER_CALCULATOR_DEV_GUIDE_EN.md)
 
@@ -62,15 +64,15 @@ cd flutterjisuanqqi20250421
 flutter build apk
 flutter build appbundle
 ```
-### 4.2 iOS 打包
+### 🍏 4.2 iOS 打包
 ```bash
 flutter build ios
 ```
-### 4.3 Web 打包
+### 🌐 4.3 Web 打包
 ```bash
 flutter build web
 ```
-### 4.4 桌面端打包（Windows/macOS/Linux）
+### 🖥️ 4.4 桌面端打包（Windows/macOS/Linux）
 ```bash
 flutter build windows
 flutter build macos
@@ -80,19 +82,28 @@ flutter build linux
 - 确保各平台依赖已配置
 - 针对不同平台进行 UI 适配
 
-## 5. 上传到 GitHub
-### 5.1 初始化 Git 仓库
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-```
-### 5.2 创建 GitHub 仓库并推送
-```bash
-git remote add origin https://github.com/yourusername/flutterjisuanqqi20250421.git
-git branch -M main
-git push -u origin main
-```
+## ☁️ 5. 上传到 GitHub Release 并分发安装包
+
+### 5.1 上传步骤（以安卓包为例）
+1. 确保本地仓库已推送到 GitHub：
+   ```bash
+   git add .
+   git commit -m "release: add app-release"
+   git push
+   ```
+2. 使用 GitHub CLI 创建 Release 并上传安装包（需已安装 gh）：
+   ```bash
+   gh release create v1.0.0 releases/app-release.apk --title "Calculator v1.0.0" --notes "Flutter 安卓安装包"
+   ```
+   - `v1.0.0` 为发布版本号，可根据实际情况更换。
+   - `releases/app-release.apk` 为安装包路径，请确保路径和文件名正确。
+   - 上传后会生成 Release 页面。
+3. 访问你的 Release 页面或最新版下载：
+   - [发布页面（v1.0.0 示例）](https://github.com/HuQingyepersonalprojectsummary/flutterjisuanqqi20250421/releases/tag/v1.0.0)
+   - [⬇️ 安卓最新版下载](https://github.com/HuQingyepersonalprojectsummary/flutterjisuanqqi20250421/releases/latest)
+
+> 每次发布新版本，只需更换版本号和安装包文件，重复上述命令即可。
+
 
 ---
 
